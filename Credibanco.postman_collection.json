@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "45d651bd-f30e-4f98-aa32-5d5982f3c167",
+		"name": "Credibanco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14136236"
+	},
+	"item": [
+		{
+			"name": "consult card",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/card/consult?pan=377816082571998",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"consult"
+					],
+					"query": [
+						{
+							"key": "pan",
+							"value": "377816082571998"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"pan\": \"377816082571991\",\r\n\t\"personName\": \"Jhon Romero\",\r\n\t\"identificationNumber\": \"1000723954\",\r\n\t\"cardType\": \"Crédito\",\r\n\t\"phoneNumber\": \"3232397300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/card/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pan\": \"377816082571991\",\r\n    \"validationNumber\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/card/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enroll card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pan\": \"377816082571991\",\r\n    \"validationNumber\": 54\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/card/enroll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"enroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consult all cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/card/consult/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"card",
+						"consult",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pan\": \"377816082571995\",\r\n    \"referenceNumber\": \"236855\",\r\n    \"total\": 500000,\r\n    \"address\": \"Calle 10b #72a - 21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaction/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel transaction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pan\": \"377816082571995\",\r\n    \"referenceNumber\": \"236855\",\r\n    \"total\": 500000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaction/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consult all transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/consult/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"consult",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

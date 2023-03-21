@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" src="styles.css" type="text/css">
+    </head>
+    <body>
+        <div class="container" style="margin-left: 10%;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Número de referencia</th>
+                            <th scope="col">Total compra</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Número de identificación</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">PAN</th>
+                            <th scope="col">Número de teléfono</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor = "let transaction of transactions">
+                            <th>{{transaction.id}}</th>
+                            <td>{{transaction.address}}</td>
+                            <td>{{transaction.referenceNumber}}</td>
+                            <td>{{transaction.totalPurchase}}</td>
+                            <td>{{transaction.date}}</td>
+                            <td>{{transaction.status}}</td>
+                            <td>{{transaction.card.user.identificationNumber}}</td>
+                            <td>{{transaction.card.user.name}}</td>
+                            <td>{{transaction.card.pan}}</td>
+                            <td>{{transaction.card.user.phoneNumber}}</td>
+                          </tr>
+                        </tbody>
+                      </table> 
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
